@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classica Harmonia - Portal Musik Klasik</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap 5 JS with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style2.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="../ASSETS/logo.png" alt="TechnoVision Logo" class="logo-img" />
+        TechnoVision
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="../SERVICES/services.html">Services</a>
+        <a href="../ABOUTUS/aboutUs.html">About Us</a>
+        <a href="../CONTACTUS/contactUs.html">Contact Us</a>
+      </div>
+
+      <div class="user-menu">
+        <div class="search-wrapper">
+          <input type="text" id="searchInput" placeholder="Search..." />
+          <button onclick="searchContent()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <button class="user-btn"><i class="fas fa-user"></i> Account</button>
+        <div class="dropdown">
+          <a href="#" onclick="openAuthModal('login')"><i class="fas fa-sign-in-alt"></i> Login</a>
+          <a href="#" onclick="openAuthModal('signup')"><i class="fas fa-user-plus"></i> Sign Up</a>
+          <a href="#"><i class="fas fa-cog"></i> Settings</a>
+        </div>
+      </div>
+      <button class="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <button class="close-mobile">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="../SERVICES/services.html">Services</a>
+    <a href="../ABOUTUS/aboutUs.html">About Us</a>
+    <a href="../CONTACTUS/contactUs.html">Contact Us</a>
+    <div class="mobile-auth">
+      <button onclick="openAuthModal('login')">Login</button>
+      <button onclick="openAuthModal('signup')">Sign Up</button>
+    </div>
+  </div>
+
+  <!-- Hero Carousel -->
+  <section class="hero-section">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url(../ASSETS/carousel1.jpg);">
+          <div class="carousel-overlay">
+            <div class="carousel-caption text-start">
+              <h1 class="display-4 fw-bold">Digital Solutions for Your Business</h1>
+              <p class="lead">Enhance efficiency and productivity with leading information technology services from
+                TechnoVision.</p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-start mt-4">
+                <a href="../SERVICES/services.html" class="btn btn-primary btn-lg px-4 me-sm-3">Explore Services</a>
+                <a href="" class="btn btn-outline-light btn-lg px-4">Consultation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url(../ASSETS/carousel2.jpg);">
+          <div class="carousel-overlay">
+            <div class="carousel-caption text-start">
+              <h1 class="display-4 fw-bold">Latest Technological Innovations</h1>
+              <p class="lead">We constantly keep up with technological advancements to provide the best solutions for
+                your business.</p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-start mt-4">
+                <a href="../ABOUTUS/aboutUs.html" class="btn btn-primary btn-lg px-4 me-sm-3">About Us</a>
+                <a href="../CONTACTUS/contactUs.html" class="btn btn-outline-light btn-lg px-4">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url(../ASSETS/carousel3.jpg);">
+          <div class="carousel-overlay">
+            <div class="carousel-caption text-start">
+              <h1 class="display-4 fw-bold">Experienced Professional Team</h1>
+              <p class="lead">Supported by experts with extensive experience in the field of information technology.</p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-start mt-4">
+                <a href="" class="btn btn-primary btn-lg px-4 me-sm-3">View Portfolio</a>
+                <a href="" class="btn btn-outline-light btn-lg px-4">Join Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="intro-section" id="about">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="../ASSETS/aboutSec.jpg" alt="About TechnoVision" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+          <h2 class="intro-title">About TechnoVision</h2>
+          <div class="bio-quote">
+            <i class="fas fa-quote-left"></i>
+            <p>Building a Digital Future with Innovative Technology Solutions.</p>
+            <i class="fas fa-quote-right"></i>
+          </div>
+          <p>TechnoVision is an information technology company focused on developing digital solutions to help
+            businesses face the challenges of the digital era. Established in 2015, we have supported hundreds of
+            clients from various industries in transforming and growing through technology.</p>
+          <p>With a team of experienced professionals, we offer comprehensive services ranging from application
+            development and IT consulting to managed services tailored to your business’s specific needs.</p>
+          <div class="mt-4">
+            <a href="../ABOUTUS/aboutUs.html" class="btn btn-primary me-2">Learn More</a>
+            <a href="../CONTACTUS/contactUs.html" class="btn btn-outline-secondary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="title d-inline-block">Our Services</h2>
+        <p class="lead mt-3">The best information technology solutions to support your business growth</p>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card service-card h-100">
+            <img src="../ASSETS/webDev.jpg" class="card-img-top" alt="Web Development">
+            <div class="card-body">
+              <div class="service-icon">
+                <i class="bi bi-code-square"></i>
+              </div>
+              <h4>Web Development</h4>
+              <p>We develop responsive websites and web applications that are engaging, functional, and easy to use to
+                enhance your business’s online presence.</p>
+              <a href="#" class="btn btn-sm btn-outline-primary mt-3">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card service-card h-100">
+            <img src="../ASSETS/mobDev.jpg" class="card-img-top" alt="Mobile App Development">
+            <div class="card-body">
+              <div class="service-icon">
+                <i class="bi bi-phone"></i>
+              </div>
+              <h4>Mobile Application Development</h4>
+              <p>Our team will help you build intuitive and powerful mobile applications for both Android and iOS with
+                features tailored to your business needs.</p>
+              <a href="#" class="btn btn-sm btn-outline-primary mt-3">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card service-card h-100">
+            <img src="../ASSETS/cloudSer.jpg" class="card-img-top" alt="Cloud Services">
+            <div class="card-body">
+              <div class="service-icon">
+                <i class="bi bi-cloud"></i>
+              </div>
+              <h4>Cloud Services</h4>
+              <p>Optimize your IT infrastructure with our secure, scalable, and efficient cloud services to support more
+                dynamic business operations.</p>
+              <a href="#" class="btn btn-sm btn-outline-primary mt-3">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-primary">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <h2 class="cta-title">Ready to Start Your Digital Transformation?</h2>
+          <p class="cta-desc">Schedule a free consultation with our expert team to discuss your business needs.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <button class="btn btn-light btn-lg">Free Consultation</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>About TechnoVision</h3>
+        <p>
+          We are a technology-based company focused on developing innovative digital solutions that transform
+          ideas into impactful products and drive real-world progress.
+        </p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/TechnoVisionprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/TechnoVisionprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/TechnoVisionprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/TechnoVisionprofile" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li>
+            <a href="../HOME/home.html" target="_blank"><i class="fas fa-angle-right"></i> Home</a>
+          </li>
+          <li>
+            <a href="../ABOUT US/aboutUs.html" target="_blank"><i class="fas fa-angle-right"></i> About Us</a>
+          </li>
+          <li>
+            <a href="../SERVICES/services.html" target="_blank"><i class="fas fa-angle-right"></i> Services</a>
+          </li>
+          <li>
+            <a href="../CONTACTUS/contactUs.html" target="_blank"><i class="fas fa-angle-right"></i> Contact Us</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-angle-right"></i> Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <ul class="footer-links">
+          <li>
+            <a href="https://www.google.com/maps?q=Universitas+Sriwijaya+Indralaya" target="_blank"><i
+                class="fas fa-map-marker-alt"></i> Universitas Sriwijaya <br> Kampus Indralaya </a>
+          </li>
+          <li>
+            <a href="https://wa.me/6282174491525"><i class="fas fa-phone"></i> +62 821 7449 1525</a>
+          </li>
+          <li>
+            <a href="mailto:TechnoVision@gmail.com"><i class="fas fa-envelope"></i>
+              TechnoVision@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Newsletter</h3>
+        <p>
+          Get exclusive updates, product news, and innovation stories from TechnoVision, straight to your
+          inbox.
+        </p>
+        <form class="newsletter">
+          <input type="email" placeholder="Your Email Address" required />
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 TechnoVision. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Login/Signup Modal -->
+  <div id="auth-modal" class="auth-modal">
+    <div class="auth-container">
+      <button class="auth-close">&times;</button>
+      <div class="auth-header">
+        <button class="auth-tab" id="login-tab">Login</button>
+        <button class="auth-tab" id="signup-tab">Sign Up</button>
+      </div>
+      <form class="auth-form" id="login-form">
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" placeholder="Your email address" required />
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="Your password" required />
+        </div>
+        <button type="submit" class="auth-btn">Login</button>
+        <div class="auth-footer">
+          <p>
+            Don't have an account?
+            <a href="#" id="switch-to-signup">Sign up here</a>
+          </p>
+        </div>
+      </form>
+      <form class="auth-form" id="signup-form">
+        <div class="form-group">
+          <label for="signup-name">Full Name</label>
+          <input type="text" id="signup-name" placeholder="Your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" placeholder="Your email address" required />
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" placeholder="Choose a password" required />
+        </div>
+        <button type="submit" class="auth-btn">Sign Up</button>
+        <div class="auth-footer">
+          <p>
+            Already have an account?
+            <a href="#" id="switch-to-login">Login here</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <i class="fas fa-music"></i> <span id="toast-message"></span>
+  </div>
+
+</body>
+
+</html>

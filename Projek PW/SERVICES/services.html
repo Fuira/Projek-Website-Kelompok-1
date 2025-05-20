@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnoVision - Layanan Teknologi Informasi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="services.css" />
+    <script src="services.js"></script>
+
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <a href="../HOME/index.html" class="logo">
+                <img src="../ASSETS/logo.png" alt="TechnoVision Logo" class="logo-img" />
+                TechnoVision
+            </a>
+            <div class="nav-links">
+                <a href="../HOME/index.html">Home</a>
+                <a href="../SERVICES/services.html">Services</a>
+                <a href="../ABOUTUS/aboutUs.html">About Us</a>
+                <a href="../CONTACTUS/contactUs.html">Contact Us</a>
+            </div>
+
+            <div class="user-menu">
+                <div class="search-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search..." />
+                    <button onclick="searchContent()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <button class="user-btn"><i class="fas fa-user"></i> Account</button>
+                <div class="dropdown">
+                    <a href="#" onclick="openAuthModal('login')"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    <a href="#" onclick="openAuthModal('signup')"><i class="fas fa-user-plus"></i> Sign Up</a>
+                    <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                </div>
+            </div>
+            <button class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="close-mobile">&times;</button>
+        <a href="../HOME/index.html">Home</a>
+        <a href="../SERVICES/services.html">Services</a>
+        <a href="../ABOUTUS/aboutUs.html">About Us</a>
+        <a href="../CONTACTUS/contactUs.html">Contact Us</a>
+        <div class="mobile-auth">
+            <button onclick="openAuthModal('login')">Login</button>
+            <button onclick="openAuthModal('signup')">Sign Up</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Trusted Information Technology Services</h1>
+                <p>Leading technology solutions to transform your business into the digital era with proven innovation
+                    and excellence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Our Premier Services</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Software Development</h4>
+                        <p>Web, desktop, and mobile application development tailored to your specific business needs.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Responsive Web Applications</li>
+                            <li><i class="fas fa-check"></i> Mobile Applications (iOS/Android)</li>
+                            <li><i class="fas fa-check"></i> Desktop Applications</li>
+                            <li><i class="fas fa-check"></i> API Development</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4>IT Consulting</h4>
+                        <p>Strategic consultation for digital transformation and optimization of your company's
+                            information technology infrastructure.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Digital Transformation Strategy</li>
+                            <li><i class="fas fa-check"></i> IT System Audit</li>
+                            <li><i class="fas fa-check"></i>Infrastructure Planning</li>
+                            <li><i class="fas fa-check"></i> Technology Roadmap</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h4>System Integration</h4>
+                        <p>Integration of various systems and platforms to improve operational efficiency and company
+                            data synchronization.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> ERP Integration</li>
+                            <li><i class="fas fa-check"></i> CRM Integration</li>
+                            <li><i class="fas fa-check"></i> Third-party API Integration</li>
+                            <li><i class="fas fa-check"></i> Database Synchronization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h4>Cloud Solutions</h4>
+                        <p>Comprehensive cloud computing services for migration, management, and optimization of your
+                            company's cloud infrastructure.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Cloud Migration</li>
+                            <li><i class="fas fa-check"></i> Cloud Architecture Design</li>
+                            <li><i class="fas fa-check"></i> Managed Cloud Services</li>
+                            <li><i class="fas fa-check"></i> Backup & Disaster Recovery</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Cybersecurity Services</h4>
+                        <p>Leading cybersecurity services to protect digital assets and IT infrastructure from various
+                            security threats.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Security Assessment</li>
+                            <li><i class="fas fa-check"></i> Penetration Testing</li>
+                            <li><i class="fas fa-check"></i> Security Monitoring 24/7</li>
+                            <li><i class="fas fa-check"></i> Incident Response</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>UI/UX Design</h4>
+                        <p>Attractive, intuitive, and responsive interface design and user experience for all digital
+                            platforms.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> User Interface Design</li>
+                            <li><i class="fas fa-check"></i> User Experience Research</li>
+                            <li><i class="fas fa-check"></i> Prototype Development</li>
+                            <li><i class="fas fa-check"></i> Usability Testing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Data Analytics & BI</h4>
+                        <p>Data analytics and business intelligence solutions to support accurate data-driven decision
+                            making.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Data Visualization</li>
+                            <li><i class="fas fa-check"></i> Dashboard Development</li>
+                            <li><i class="fas fa-check"></i> Predictive Analytics</li>
+                            <li><i class="fas fa-check"></i> Reporting Automation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>Managed IT Services</h4>
+                        <p>Comprehensive IT infrastructure management with 24/7 technical support to maintain optimal
+                            business operations.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Network Management</li>
+                            <li><i class="fas fa-check"></i> Server Maintenance</li>
+                            <li><i class="fas fa-check"></i> Help Desk Support</li>
+                            <li><i class="fas fa-check"></i> System Monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Digital Transformation</h4>
+                        <p>Comprehensive digital transformation to optimize business processes and enhance the company's
+                            competitive advantage.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Process Automation</li>
+                            <li><i class="fas fa-check"></i> Workflow Optimization</li>
+                            <li><i class="fas fa-check"></i> Digital Strategy Planning</li>
+                            <li><i class="fas fa-check"></i> Change Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h3>Ready to Begin Your Digital Transformation?</h3>
+            <p>Contact our expert team for a free consultation and discover the best technology solutions for your
+                business.
+            </p>
+            <a href="#contact" class="btn btn-primary btn-lg me-3">Free Consultation</a>
+            <a href="tel:+6221123456789" class="btn btn-primary btn-lg me-3">
+                Contact now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About TechnoVision</h3>
+                <p>
+                    We are a technology-based company focused on developing innovative digital solutions that transform
+                    ideas into impactful products and drive real-world progress.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/TechnoVisionprofile" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/TechnoVisionprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/TechnoVisionprofile" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/TechnoVisionprofile" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="../HOME/home.html" target="_blank"><i class="fas fa-angle-right"></i> Home</a>
+                    </li>
+                    <li>
+                        <a href="../ABOUT US/aboutUs.html" target="_blank"><i class="fas fa-angle-right"></i> About
+                            Us</a>
+                    </li>
+                    <li>
+                        <a href="../SERVICES/services.html" target="_blank"><i class="fas fa-angle-right"></i>
+                            Services</a>
+                    </li>
+                    <li>
+                        <a href="../CONTACTUS/contactUs.html" target="_blank"><i class="fas fa-angle-right"></i> Contact
+                            Us</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-angle-right"></i> Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="https://www.google.com/maps?q=Universitas+Sriwijaya+Indralaya" target="_blank"><i
+                                class="fas fa-map-marker-alt"></i> Universitas Sriwijaya <br> Kampus Indralaya </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/6282174491525"><i class="fas fa-phone"></i> +62 821 7449 1525</a>
+                    </li>
+                    <li>
+                        <a href="mailto:TechnoVision@gmail.com"><i class="fas fa-envelope"></i>
+                            TechnoVision@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>
+                    Get exclusive updates, product news, and innovation stories from TechnoVision, straight to your
+                    inbox.
+                </p>
+                <form class="newsletter">
+                    <input type="email" placeholder="Your Email Address" required />
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 TechnoVision. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Composer Biography -->
+    <div id="composer-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h3 id="composer-name"></h3>
+            <p id="composer-bio"></p>
+        </div>
+    </div>
+
+    <!-- Login/Signup Modal -->
+    <div id="auth-modal" class="auth-modal">
+        <div class="auth-container">
+            <button class="auth-close">&times;</button>
+            <div class="auth-header">
+                <button class="auth-tab" id="login-tab">Login</button>
+                <button class="auth-tab" id="signup-tab">Sign Up</button>
+            </div>
+            <form class="auth-form" id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Your email address" required />
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Your password" required />
+                </div>
+                <button type="submit" class="auth-btn">Login</button>
+                <div class="auth-footer">
+                    <p>
+                        Don't have an account?
+                        <a href="#" id="switch-to-signup">Sign up here</a>
+                    </p>
+                </div>
+            </form>
+            <form class="auth-form" id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" placeholder="Your full name" required />
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Your email address" required />
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Choose a password" required />
+                </div>
+                <button type="submit" class="auth-btn">Sign Up</button>
+                <div class="auth-footer">
+                    <p>
+                        Already have an account?
+                        <a href="#" id="switch-to-login">Login here</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-music"></i> <span id="toast-message"></span>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

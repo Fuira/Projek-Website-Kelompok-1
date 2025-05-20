@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TechnoVision</title>
+    <script src="contactUs.js"></script>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="contactUs.css">
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <a href="../HOME/index.html" class="logo">
+                <img src="../ASSETS/logo.png" alt="TechnoVision Logo" class="logo-img" />
+                TechnoVision
+            </a>
+            <div class="nav-links">
+                <a href="../HOME/index.html">Home</a>
+                <a href="../SERVICES/services.html">Services</a>
+                <a href="../ABOUTUS/aboutUs.html">About Us</a>
+                <a href="contactUs.html">Contact Us</a>
+            </div>
+
+            <div class="user-menu">
+                <div class="search-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search..." />
+                    <button onclick="searchContent()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <button class="user-btn"><i class="fas fa-user"></i> Account</button>
+                <div class="dropdown">
+                    <a href="#" onclick="openAuthModal('login')"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    <a href="#" onclick="openAuthModal('signup')"><i class="fas fa-user-plus"></i> Sign Up</a>
+                    <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                </div>
+            </div>
+            <button class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="close-mobile">&times;</button>
+        <a href="../HOME/index.html">Home</a>
+        <a href="../SERVICES/services.html">Services</a>
+        <a href="../ABOUTUS/aboutUs.html">About Us</a>
+        <a href="../CONTACTUS/contactUs.html">Contact Us</a>
+        <div class="mobile-auth">
+            <button onclick="openAuthModal('login')">Login</button>
+            <button onclick="openAuthModal('signup')">Sign Up</button>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 mx-auto">
+                    <h1>Get in <span class="accent-text">Touch</span> With Us</h1>
+                    <p>Have questions about our innovative solutions? Looking for technological expertise? Our team at
+                        TechnoVision is ready to assist you with all your inquiries.</p>
+                    <a href="#contact-form" class="btn">Contact Now</a>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="contact-info-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Our Location</h3>
+                        <p>Universitas Sriwijaya<br>Kampus Indralaya</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p>TechnoVision@gmail.com<br>support@technovision.com</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>+62 821 7449 1525<br>+62 822 8025 8028</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container" id="contact-form">
+        <h2 class="title">Contact Us</h2>
+        <p class="text-center mb-5">Have questions about our services? Need technical support? Get in touch with our
+            team and we'll be happy to assist you.</p>
+
+        <div class="row contact-section">
+            <!-- Contact Information -->
+            <div class="col-lg-4 contact-info">
+                <h3>Contact Information</h3>
+                <p>Feel free to reach out to us through any of these channels. Our team is available to assist you
+                    Monday to Friday, 9AM to 6PM.</p>
+
+                <div class="contact-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>Universitas Sriwijaya<br>Kampus Indralaya</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+62 821 7449 1525<br>+62 822 8025 8028</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>TechnoVision@gmail.com<br>support@technovision.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Business Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday - Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="text-light"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-8 contact-form">
+                <h3>Send Us a Message</h3>
+                <p>Complete the form below and our team will get back to you within 24 hours.</p>
+
+                <!-- Step Progress Bar -->
+                <div class="step-progress">
+                    <div class="step-indicator">
+                        <div class="step active" id="personal-step-indicator">
+                            <div class="step-number">1</div>
+                            <div class="step-title">Personal Info</div>
+                        </div>
+                        <div class="step" id="message-step-indicator">
+                            <div class="step-number">2</div>
+                            <div class="step-title">Your Message</div>
+                        </div>
+                        <div class="step" id="review-step-indicator">
+                            <div class="step-number">3</div>
+                            <div class="step-title">Review & Submit</div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form id="contactForm">
+                    <!-- Step 1: Personal Information -->
+                    <div class="form-step active" id="step1">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" class="form-control1" id="firstName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" class="form-control1" id="lastName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control1" id="email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control1" id="phone">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="company" class="form-label">Company/Organization</label>
+                                <input type="text" class="form-control1" id="company">
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <div></div>
+                            <button type="button" class="btn" id="step1Next">Next Step</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Message Details -->
+                    <div class="form-step" id="step2">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="department" class="form-label">Department *</label>
+                                <select class="form-select" id="department" required>
+                                    <option value="" selected disabled>Select Department</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Sales">Sales</option>
+                                    <option value="Partnership">Partnership</option>
+                                    <option value="Career">Career</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Your Message *</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Subscribe to our newsletter for updates
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline-secondary" id="step2Prev">Previous
+                                Step</button>
+                            <button type="button" class="btn" id="step2Next">Review Information</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Review & Submit -->
+                    <div class="form-step" id="step3">
+                        <h4>Review Your Information</h4>
+                        <p>Please review the information below before submitting your message.</p>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <h5 class="mb-2">Personal Information</h5>
+                                    <p class="mb-1"><strong>Name:</strong> <span id="reviewName">-</span></p>
+                                    <p class="mb-1"><strong>Email:</strong> <span id="reviewEmail">-</span></p>
+                                    <p class="mb-1"><strong>Phone:</strong> <span id="reviewPhone">-</span></p>
+                                    <p class="mb-1"><strong>Company:</strong> <span id="reviewCompany">-</span></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <h5 class="mb-2">Message Details</h5>
+                                    <p class="mb-1"><strong>Subject:</strong> <span id="reviewSubject">-</span></p>
+                                    <p class="mb-1"><strong>Department:</strong> <span id="reviewDepartment">-</span>
+                                    </p>
+                                    <p class="mb-1"><strong>Newsletter:</strong> <span id="reviewNewsletter">-</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <h5 class="mb-2">Your Message</h5>
+                                    <p id="reviewMessage" class="p-3 bg-light rounded">-</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="termsAgreement" required>
+                            <label class="form-check-label" for="termsAgreement">
+                                I agree to the <a href="#">terms and conditions</a> and <a href="#">privacy policy</a>.
+                            </label>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline-secondary" id="step3Prev">Previous
+                                Step</button>
+                            <button type="submit" class="btn" id="submitForm">Submit Message</button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Submission Result -->
+                <div class="submission-result" id="submissionResult">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-check-circle text-success fa-3x"></i>
+                    </div>
+                    <h4 class="result-title text-center">Message Sent Successfully!</h4>
+                    <p class="text-center">Thank you for contacting TechnoVision. Our team will get back to you shortly.
+                    </p>
+
+                    <div class="result-details mt-4">
+                        <h5>Message Details:</h5>
+                        <p class="result-data"><strong>Name:</strong> <span id="resultName"></span></p>
+                        <p class="result-data"><strong>Email:</strong> <span id="resultEmail"></span></p>
+                        <p class="result-data"><strong>Subject:</strong> <span id="resultSubject"></span></p>
+                        <p class="result-data"><strong>Department:</strong> <span id="resultDepartment"></span></p>
+                        <p class="result-data"><strong>Message:</strong> <span id="resultMessage"></span></p>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="button" class="btn" id="sendNewMessage">Send Another Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container py-5">
+        <h2 class="title">Frequently Asked Questions</h2>
+        <p class="text-center mb-5">Find answers to the most common questions about our products and services.</p>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="accordion" id="contactFAQ">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                How quickly can I expect a response to my inquiry?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne"
+                            data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                <p>We strive to respond to all inquiries within 24 business hours. For urgent technical
+                                    support matters, we recommend contacting our support team directly by phone for
+                                    faster assistance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                What information should I include in my support request?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo"
+                            data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                <p>To help us assist you more efficiently, please include the following in your support
+                                    request:</p>
+                                <ul>
+                                    <li>Your product or service name</li>
+                                    <li>Version number or subscription details</li>
+                                    <li>A clear description of the issue</li>
+                                    <li>Any error messages you're receiving</li>
+                                    <li>Steps you've already taken to resolve the issue</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Do you offer phone support for technical issues?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree"
+                            data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                <p>Yes, we offer phone support for technical issues during our business hours. For
+                                    complex technical problems, our team might need to schedule a remote session to
+                                    better assist you.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                How can I request a product demonstration?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour"
+                            data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                <p>You can request a product demonstration by selecting "Sales" from the department
+                                    dropdown in our contact form. Please mention which product you're interested in, and
+                                    our sales team will arrange a personalized demonstration at your convenience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Where can I find documentation for your products?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive"
+                            data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                <p>All our product documentation is available in our Knowledge Center at <a
+                                        href="#">docs.technovision.com</a>. There you'll find user guides, API
+                                    documentation, video tutorials, and troubleshooting resources.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br><br><br>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About TechnoVision</h3>
+                <p>
+                    We are a technology-based company focused on developing innovative digital solutions that transform
+                    ideas into impactful products and drive real-world progress.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/TechnoVisionprofile" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/TechnoVisionprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/TechnoVisionprofile" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/TechnoVisionprofile" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="../HOME/home.html" target="_blank"><i class="fas fa-angle-right"></i> Home</a>
+                    </li>
+                    <li>
+                        <a href="../ABOUT US/aboutUs.html" target="_blank"><i class="fas fa-angle-right"></i> About
+                            Us</a>
+                    </li>
+                    <li>
+                        <a href="../SERVICES/services.html" target="_blank"><i class="fas fa-angle-right"></i>
+                            Services</a>
+                    </li>
+                    <li>
+                        <a href="../CONTACTUS/contactUs.html" target="_blank"><i class="fas fa-angle-right"></i> Contact
+                            Us</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-angle-right"></i> Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="https://www.google.com/maps?q=Universitas+Sriwijaya+Indralaya" target="_blank"><i
+                                class="fas fa-map-marker-alt"></i> Universitas Sriwijaya <br> Kampus Indralaya </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/6282174491525"><i class="fas fa-phone"></i> +62 821 7449 1525</a>
+                    </li>
+                    <li>
+                        <a href="mailto:TechnoVision@gmail.com"><i class="fas fa-envelope"></i>
+                            TechnoVision@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>
+                    Get exclusive updates, product news, and innovation stories from TechnoVision, straight to your
+                    inbox.
+                </p>
+                <form class="newsletter">
+                    <input type="email" placeholder="Your Email Address" required />
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 TechnoVision. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login/Signup Modal -->
+    <div id="auth-modal" class="auth-modal">
+        <div class="auth-container">
+            <button class="auth-close">&times;</button>
+            <div class="auth-header">
+                <button class="auth-tab" id="login-tab">Login</button>
+                <button class="auth-tab" id="signup-tab">Sign Up</button>
+            </div>
+            <form class="auth-form" id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Your email address" required />
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Your password" required />
+                </div>
+                <button type="submit" class="auth-btn">Login</button>
+                <div class="auth-footer">
+                    <p>
+                        Don't have an account?
+                        <a href="#" id="switch-to-signup">Sign up here</a>
+                    </p>
+                </div>
+            </form>
+            <form class="auth-form" id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" placeholder="Your full name" required />
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Your email address" required />
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Choose a password" required />
+                </div>
+                <button type="submit" class="auth-btn">Sign Up</button>
+                <div class="auth-footer">
+                    <p>
+                        Already have an account?
+                        <a href="#" id="switch-to-login">Login here</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-music"></i> <span id="toast-message"></span>
+    </div>
+
+    <!-- Bootstrap 5.3 JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Script for Multi-step Form -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Form steps elements
+            const step1 = document.getElementById('step1');
+            const step2 = document.getElementById('step2');
+            const step3 = document.getElementById('step3');
+
+            // Step indicators
+            const personalStepIndicator = document.getElementById('personal-step-indicator');
+            const messageStepIndicator = document.getElementById('message-step-indicator');
+            const reviewStepIndicator = document.getElementById('review-step-indicator');
+
+            // Navigation buttons
+            const step1Next = document.getElementById('step1Next');
+            const step2Prev = document.getElementById('step2Prev');
+            const step2Next = document.getElementById('step2Next');
+            const step3Prev = document.getElementById('step3Prev');
+            const submitForm = document.getElementById('submitForm');
+            const sendNewMessage = document.getElementById('sendNewMessage');
+
+            // Progress bar
+            const progressBar = document.querySelector('.progress-bar');
+
+            // Form and result container
+            const contactForm = document.getElementById('contactForm');
+            const submissionResult = document.getElementById('submissionResult');
+
+            // Step 1 to Step 2
+            step1Next.addEventListener('click', function () {
+                // Validate Step 1 fields
+                const firstName = document.getElementById('firstName').value;
+                const lastName = document.getElementById('lastName').value;
+                const email = document.getElementById('email').value;
+
+                if (!firstName || !lastName || !email) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+
+                step1.classList.remove('active');
+                step2.classList.add('active');
+
+                personalStepIndicator.classList.add('completed');
+                messageStepIndicator.classList.add('active');
+
+                progressBar.style.width = '66%';
+                progressBar.setAttribute('aria-valuenow', '66');
+            });
+
+            // Step 2 to Step 1
+            step2Prev.addEventListener('click', function () {
+                step2.classList.remove('active');
+                step1.classList.add('active');
+
+                messageStepIndicator.classList.remove('active');
+
+                progressBar.style.width = '33%';
+                progressBar.setAttribute('aria-valuenow', '33');
+            });
+
+            // Step 2 to Step 3
+            step2Next.addEventListener('click', function () {
+                // Validate Step 2 fields
+                const subject = document.getElementById('subject').value;
+                const department = document.getElementById('department').value;
+                const message = document.getElementById('message').value;
+
+                if (!subject || !department || !message) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+
+                // Populate review information
+                const firstName = document.getElementById('firstName').value;
+                const lastName = document.getElementById('lastName').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value || 'Not provided';
+                const company = document.getElementById('company').value || 'Not provided';
+                const newsletter = document.getElementById('newsletter').checked ? 'Yes' : 'No';
+
+                document.getElementById('reviewName').textContent = firstName + ' ' + lastName;
+                document.getElementById('reviewEmail').textContent = email;
+                document.getElementById('reviewPhone').textContent = phone;
+                document.getElementById('reviewCompany').textContent = company;
+                document.getElementById('reviewSubject').textContent = subject;
+                document.getElementById('reviewDepartment').textContent = department;
+                document.getElementById('reviewMessage').textContent = message;
+                document.getElementById('reviewNewsletter').textContent = newsletter;
+
+                step2.classList.remove('active');
+                step3.classList.add('active');
+
+                messageStepIndicator.classList.add('completed');
+                reviewStepIndicator.classList.add('active');
+
+                progressBar.style.width = '100%';
+                progressBar.setAttribute('aria-valuenow', '100');
+            });
+
+            // Step 3 to Step 2
+            step3Prev.addEventListener('click', function () {
+                step3.classList.remove('active');
+                step2.classList.add('active');
+
+                reviewStepIndicator.classList.remove('active');
+
+                progressBar.style.width = '66%';
+                progressBar.setAttribute('aria-valuenow', '66');
+            });
+
+            // Form submission
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Check terms agreement
+                if (!document.getElementById('termsAgreement').checked) {
+                    alert('Please agree to the terms and conditions to proceed.');
+                    return;
+                }
+
+                // Get form values for submission result
+                const firstName = document.getElementById('firstName').value;
+                const lastName = document.getElementById('lastName').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const department = document.getElementById('department').value;
+                const message = document.getElementById('message').value;
+
+                // Set result values
+                document.getElementById('resultName').textContent = firstName + ' ' + lastName;
+                document.getElementById('resultEmail').textContent = email;
+                document.getElementById('resultSubject').textContent = subject;
+                document.getElementById('resultDepartment').textContent = department;
+                document.getElementById('resultMessage').textContent = message;
+
+                // Hide form and show result
+                contactForm.style.display = 'none';
+                submissionResult.style.display = 'block';
+            });
+
+            // Send new message button
+            sendNewMessage.addEventListener('click', function () {
+                // Reset form fields
+                contactForm.reset();
+
+                // Reset form steps and indicators
+                step3.classList.remove('active');
+                step2.classList.remove('active');
+                step1.classList.add('active');
+
+                messageStepIndicator.classList.remove('active', 'completed');
+                reviewStepIndicator.classList.remove('active', 'completed');
+                personalStepIndicator.classList.remove('completed');
+                personalStepIndicator.classList.add('active');
+
+                progressBar.style.width = '33%';
+                progressBar.setAttribute('aria-valuenow', '33');
+
+                // Show form and hide result
+                contactForm.style.display = 'block';
+                submissionResult.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>

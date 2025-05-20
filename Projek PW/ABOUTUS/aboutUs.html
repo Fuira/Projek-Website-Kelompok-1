@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechnoVision - About Us</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="aboutUs.css" />
+    <script src="aboutUs.js"></script>
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <a href="../HOME/index.html" class="logo">
+                <img src="../ASSETS/logo.png" alt="TechnoVision Logo" class="logo-img" />
+                TechnoVision
+            </a>
+            <div class="nav-links">
+                <a href="../HOME/index.html">Home</a>
+                <a href="../SERVICES/services.html">Services</a>
+                <a href="../ABOUTUS/aboutUs.html">About Us</a>
+                <a href="../CONTACTUS/contactUs.html">Contact Us</a>
+            </div>
+
+            <div class="user-menu">
+                <div class="search-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search..." />
+                    <button onclick="searchContent()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <button class="user-btn"><i class="fas fa-user"></i> Account</button>
+                <div class="dropdown">
+                    <a href="#" onclick="openAuthModal('login')"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    <a href="#" onclick="openAuthModal('signup')"><i class="fas fa-user-plus"></i> Sign Up</a>
+                    <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                </div>
+            </div>
+            <button class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="close-mobile">&times;</button>
+        <a href="../HOME/index.html">Home</a>
+        <a href="../SERVICES/services.html">Services</a>
+        <a href="../ABOUTUS/aboutUs.html">About Us</a>
+        <a href="../CONTACTUS/contactUs.html">Contact Us</a>
+        <div class="mobile-auth">
+            <button onclick="openAuthModal('login')">Login</button>
+            <button onclick="openAuthModal('signup')">Sign Up</button>
+        </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <section class="intro-section" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="intro-title">About TechnoVision</h2>
+                    <div class="bio-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Building a Digital Future with Innovative Technology Solutions.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <p>TechnoVision is an information technology company focused on developing digital solutions to help
+                        businesses face the challenges of the digital era. Established in 2015, we have supported
+                        hundreds of clients from various industries in transforming and growing through technology.</p>
+                    <p>With a team of experienced professionals, we offer comprehensive services ranging from
+                        application development and IT consulting to managed services tailored to your business’s
+                        specific needs.</p>
+                    <div class="mt-4">
+                        <a href="#our-story" class="btn">Learn Our Story</a>
+                    </div>
+
+                </div>
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="../ASSETS/aboutSec.jpg" alt="About TechnoVision" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="about-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our Story</h2>
+                <div class="divider mx-auto"></div>
+                <p class="mb-5">From a small startup to an industry leader</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-content">
+                        <p>Founded by a group of tech enthusiasts with a shared vision to make technology accessible
+                            to businesses of all sizes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2018</div>
+                    <div class="timeline-content">
+                        <p>Expanded our services to include AI solutions and opened our first international office.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-content">
+                        <p>Launched our award-winning cloud platform that revolutionized how businesses manage their
+                            digital infrastructure.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2021</div>
+                    <div class="timeline-content">
+                        <p>Received recognition as one of the fastest-growing tech companies in Asia Pacific.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <p>Acquired DataFlow Technologies, strengthening our data analytics capabilities.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <p>Celebrating 10 years of innovation with the launch of our next-generation AI platform.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Vision -->
+    <section class="about-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="mission-vision-card">
+                        <div class="icon-box">
+                            <i class="bi bi-person-workspace"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To empower businesses with innovative technology solutions that drive growth, efficiency,
+                            and competitive advantage in an ever-evolving digital landscape.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="mission-vision-card">
+                        <div class="icon-box">
+                            <i class="bi bi-binoculars"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To be the global leader in transformative technology solutions, setting new standards for
+                            innovation, quality, and customer satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our Core Values</h2>
+                <div class="divider mx-auto"></div>
+                <p class="mb-5">The principles that guide everything we do</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="value-card">
+                        <div class="icon-box">
+                            <i class="bi bi-lightbulb-fill"></i>
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>We constantly push boundaries and challenge conventional thinking to create
+                            forward-thinking solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card">
+                        <div class="icon-box">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3>Integrity</h3>
+                        <p>We operate with transparency, honesty, and ethical standards in all our business
+                            interactions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card">
+                        <div class="icon-box">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <h3>Collaboration</h3>
+                        <p>We believe in the power of teamwork and partnerships to create exceptional outcomes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card">
+                        <div class="icon-box">
+                            <i class="bi bi-stars"></i>
+                        </div>
+                        <h3>Excellence</h3>
+                        <p>We strive for exceptional quality in everything we do, from code to customer service.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card">
+                        <div class="icon-box">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h3>Customer Focus</h3>
+                        <p>We put our clients at the center of our decisions and solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card">
+                        <div class="icon-box">
+                            <i class="bi bi-arrow-repeat"></i>
+                        </div>
+                        <h3>Adaptability</h3>
+                        <p>We embrace change and continuously evolve to stay ahead in a dynamic industry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Leadership -->
+    <section class="about-section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Leadership Team</h2>
+                <div class="divider mx-auto"></div>
+                <p class="mb-5">Meet the visionaries behind TechnoVision</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="../ASSETS/Daiva.jpeg" alt="COO" class="img-fluid">
+                        </div>
+                        <div class="team-info">
+                            <h3>Daiva Averde Radillah</h3>
+                            <p class="position">Chief Operating Officer</p>
+                            <p class="bio">Oversees the daily operations of the company, making sure that every
+                                process runs smoothly and efficiently. His focus on structure and execution helps
+                                translate plans into real outcomes.</p>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/ourprofile"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/ourprofile"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="../ASSETS/Fillah.jpeg" alt="CEO" class="img-fluid">
+                        </div>
+                        <div class="team-info">
+                            <h3>M. Fillah Attaqy</h3>
+                            <p class="position">Chief Executive Officer</p>
+                            <p class="bio">Responsible for leading the overall vision and strategic direction
+                                of TechnoVision. With a strong sense of leadership, he ensures that the entire team
+                                stays aligned with the company’s long-term goals.</p>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/ourprofile"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/ourprofile"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="../ASSETS/Adel.png" alt="CTO" class="img-fluid">
+                        </div>
+                        <div class="team-info">
+                            <h3>Nabila Adlia Ramadhani</h3>
+                            <p class="position">Chief Technology Officer</p>
+                            <p class="bio">Leads the development and innovation of TechnoVision’s technological
+                                solutions. With her expertise in tech, she ensures that every product we create is
+                                forward-thinking and impactful.</p>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/ourprofile"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/ourprofile"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2>Our Approach</h2>
+                    <div class="divider mb-4"></div>
+                    <p>At TechnoVision, we believe in a consultative approach that puts your business needs at the
+                        center of our technology solutions. Our process is designed to ensure we deliver value at
+                        every step:</p>
+                    <ul class="approach-list">
+                        <li><i class="bi bi-check-circle-fill"></i> DISCOVER <br> We begin by
+                            understanding your business challenges and objectives.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> STRATEGIZE <br> We develop a
+                            tailored technology roadmap aligned with your goals.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> IMPLEMENT <br> Our expert team
+                            brings the solution to life with meticulous execution.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> OPTIMIZE <br> We continuously
+                            refine and improve to ensure maximum ROI.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> SUPPORT <br> Our relationship
+                            continues with ongoing maintenance and support.</li>
+                    </ul>
+                    <a href="services.html" class="btn mt-3">Explore Our Services</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="../ASSETS/approachSec.jpg" alt="Our Approach" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients & Partners -->
+    <section class="about-section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our Partnerships</h2>
+                <div class="divider mx-auto"></div>
+                <p class="mb-5">Trusted by leading companies across industries</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <img src="https://msblogs.thesourcemediaassets.com/2012/08/8867.Microsoft_5F00_Logo_2D00_for_2D00_screen.jpg"
+                        alt="Microsoft">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://asset.kompas.com/crops/C5OurjgEHlQtVgRSfCQG5iFoQOg=/0x0:780x520/1200x800/data/photo/2021/12/14/61b85c1f8249c.jpg"
+                        alt="AWS">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://logowik.com/content/uploads/images/paloalto-networks9026.jpg" alt="Palo Alto">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://static.cdnlogo.com/logos/g/46/google-cloud.png" alt="Google Cloud">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://ratu.ai/wp-content/uploads/2024/10/ibm.jpg" alt="IBM">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://mitto.ch/wp-content/uploads/2024/01/salesforce@2x-8-1.png" alt="Salesforce">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2>Ready To Transform Your Business?</h2>
+                <p>Discover how TechnoVision can help you achieve your technology goals.</p>
+                <div class="cta-buttons">
+                    <a href="../SERVICES/services.html" class="btn">Our Services</a>
+                    <a href="../CONTACTUS/contactUs.html" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About TechnoVision</h3>
+                <p>
+                    We are a technology-based company focused on developing innovative digital solutions that transform
+                    ideas into impactful products and drive real-world progress.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/TechnoVisionprofile" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/TechnoVisionprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/TechnoVisionprofile" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/TechnoVisionprofile" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="../HOME/home.html" target="_blank"><i class="fas fa-angle-right"></i> Home</a>
+                    </li>
+                    <li>
+                        <a href="../ABOUT US/aboutUs.html" target="_blank"><i class="fas fa-angle-right"></i> About
+                            Us</a>
+                    </li>
+                    <li>
+                        <a href="../SERVICES/services.html" target="_blank"><i class="fas fa-angle-right"></i>
+                            Services</a>
+                    </li>
+                    <li>
+                        <a href="../CONTACTUS/contactUs.html" target="_blank"><i class="fas fa-angle-right"></i> Contact
+                            Us</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-angle-right"></i> Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="https://www.google.com/maps?q=Universitas+Sriwijaya+Indralaya" target="_blank"><i
+                                class="fas fa-map-marker-alt"></i> Universitas Sriwijaya <br> Kampus Indralaya </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/6282174491525"><i class="fas fa-phone"></i> +62 821 7449 1525</a>
+                    </li>
+                    <li>
+                        <a href="mailto:TechnoVision@gmail.com"><i class="fas fa-envelope"></i>
+                            TechnoVision@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>
+                    Get exclusive updates, product news, and innovation stories from TechnoVision, straight to your
+                    inbox.
+                </p>
+                <form class="newsletter">
+                    <input type="email" placeholder="Your Email Address" required />
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 TechnoVision. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Composer Biography -->
+    <div id="composer-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h3 id="composer-name"></h3>
+            <p id="composer-bio"></p>
+        </div>
+    </div>
+
+    <!-- Login/Signup Modal -->
+    <div id="auth-modal" class="auth-modal">
+        <div class="auth-container">
+            <button class="auth-close">&times;</button>
+            <div class="auth-header">
+                <button class="auth-tab" id="login-tab">Login</button>
+                <button class="auth-tab" id="signup-tab">Sign Up</button>
+            </div>
+            <form class="auth-form" id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Your email address" required />
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Your password" required />
+                </div>
+                <button type="submit" class="auth-btn">Login</button>
+                <div class="auth-footer">
+                    <p>
+                        Don't have an account?
+                        <a href="#" id="switch-to-signup">Sign up here</a>
+                    </p>
+                </div>
+            </form>
+            <form class="auth-form" id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" placeholder="Your full name" required />
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Your email address" required />
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Choose a password" required />
+                </div>
+                <button type="submit" class="auth-btn">Sign Up</button>
+                <div class="auth-footer">
+                    <p>
+                        Already have an account?
+                        <a href="#" id="switch-to-login">Login here</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-music"></i> <span id="toast-message"></span>
+    </div>
+
+</body>
+
+</html>
